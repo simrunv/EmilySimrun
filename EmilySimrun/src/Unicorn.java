@@ -3,7 +3,8 @@
  */
 public class Unicorn extends Pepsi{
 
-    public Unicorn(int x, int y){
-        super(x, y);
+    public Unicorn(){
+        super(500, 300);
+        setPic("unicorn.png", 0);
     }
 }
