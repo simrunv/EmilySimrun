@@ -19,8 +19,7 @@ public class Pepsi {
         loc = new Point(x, y);
         dir = 90;
         speed = 5;
-//        setPic()
-
+        setPic("blank.png", 0);
     }
 
     public void draw(Graphics2D g2) {
@@ -30,7 +29,6 @@ public class Pepsi {
         AffineTransform tx = AffineTransform.getRotateInstance(rotationRequired, locationX, locationY);
         AffineTransformOp op = new AffineTransformOp(tx, AffineTransformOp.TYPE_BILINEAR);
         g2.drawImage(op.filter(pic, null), loc.x, loc.y, null);
-
     }
 
     public void setPic(String fileName, int orientation) {
@@ -40,6 +38,36 @@ public class Pepsi {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void update() {
+        int dx = (int) (Math.cos(Math.toRadians(dir)) * speed);
+        int dy = -(int) (Math.sin(Math.toRadians(dir)) * speed);
+        loc.translate(dx, dy);
+    }
+
+    public void setDir(int newDir) {
+        dir = newDir;
+    }
+
+    public Point getLoc() {
+        return loc;
+    }
+
+    public void setLoc(Point loc) {
+        this.loc = loc;
+    }
+
+    public int getDir() {
+        return dir;
+    }
+
+    public Rectangle getBoundingRectangle() {
+        return new Rectangle(loc.x, loc.y, pic.getWidth(), pic.getHeight());
+    }
+
+    public boolean intersects(Pepsi other){
+        return getBoundingRectangle().intersects(other.getBoundingRectangle());
     }
 
 }
