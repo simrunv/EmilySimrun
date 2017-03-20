@@ -20,4 +20,4 @@ public class Candy extends Pepsi{
 //            setLoc(new Point(1000, getLoc().y));
 //        }
 //    }
-//}
+}
