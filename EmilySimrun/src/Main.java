@@ -23,3 +23,4 @@ public class Main extends JPanel{
         window.setResizable(false);
     }
 }
+
