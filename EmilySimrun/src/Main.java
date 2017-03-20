@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 /**
  * Created by simrun_virkud on 3/15/17.
@@ -6,6 +7,21 @@ import javax.swing.*;
 public class Main extends JPanel{
 
     public static final int FRAMEWIDTH = 1000, FRAMEHEIGHT = 600;
+    private Pepsi unicorn;
+
+    public Main(){
+        unicorn = new Unicorn();
+    }
+
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
+        Graphics2D g2 = (Graphics2D) g;
+
+        unicorn.draw(g2);
+    }
+
+
+
 
     public static void main(String[] args) {
         JFrame window = new JFrame("Flappy Unicorn");

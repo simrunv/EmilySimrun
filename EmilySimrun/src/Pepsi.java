@@ -17,6 +17,7 @@ public class Pepsi {
 
     public Pepsi(int x, int y){
         loc = new Point(x, y);
+        setLoc(loc);
         dir = 90;
         speed = 5;
         setPic("blank.png", 0);
