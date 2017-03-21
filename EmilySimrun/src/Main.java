@@ -7,11 +7,12 @@ import java.awt.*;
 public class Main extends JPanel{
 
     public static final int FRAMEWIDTH = 1000, FRAMEHEIGHT = 600;
-    private Pepsi unicorn, candy;
+    private Pepsi unicorn, candy, candy2;
 
     public Main(){
         unicorn = new Unicorn();
         candy = new Candy(100,100);
+        candy2 = new Candy(200,200);
     }
 
     public void paintComponent(Graphics g) {
@@ -20,6 +21,9 @@ public class Main extends JPanel{
 
         unicorn.draw(g2);
         candy.draw(g2);
+        candy2.setPic("smallcandy.png", 90);
+        candy2.draw(g2);
+
     }
 
 
