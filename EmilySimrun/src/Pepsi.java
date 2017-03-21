@@ -34,7 +34,7 @@ public class Pepsi {
 
     public void setPic(String fileName, int orientation) {
         try {
-            pic = ImageIO.read(new File("res/" + fileName));
+            pic = ImageIO.read(new File("EmilySimrun/res/" + fileName));
             picOrientation = orientation;
         } catch (Exception e) {
             e.printStackTrace();

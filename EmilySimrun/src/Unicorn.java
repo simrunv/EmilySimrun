@@ -5,6 +5,6 @@ public class Unicorn extends Pepsi{
 
     public Unicorn(){
         super(500, 300);
-        setPic("unicorn.png", 0);
+        setPic("unicorn.png", 90);
     }
 }
