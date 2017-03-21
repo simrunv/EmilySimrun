@@ -8,7 +8,7 @@ public class Candy extends Pepsi{
 
     public Candy( int x, int y){
         super (500, 300);
-        setPic("candy.png", 0);
+        setPic("candy.png", 90);
 
 }
     public void update() {
