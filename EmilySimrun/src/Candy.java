@@ -11,6 +11,7 @@ public class Candy extends Pepsi{
         setPic("candy.png", 90);
 
 }
+
     public void update() {
         super.update();
         if (getLoc().x < 0) {
