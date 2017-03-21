@@ -7,10 +7,11 @@ import java.awt.*;
 public class Main extends JPanel{
 
     public static final int FRAMEWIDTH = 1000, FRAMEHEIGHT = 600;
-    private Pepsi unicorn;
+    private Pepsi unicorn, candy;
 
     public Main(){
         unicorn = new Unicorn();
+        candy = new Candy(100,100);
     }
 
     public void paintComponent(Graphics g) {
@@ -18,6 +19,7 @@ public class Main extends JPanel{
         Graphics2D g2 = (Graphics2D) g;
 
         unicorn.draw(g2);
+        candy.draw(g2);
     }
 
 
