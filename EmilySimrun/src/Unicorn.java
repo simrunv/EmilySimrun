@@ -8,7 +8,7 @@ public class Unicorn extends Pepsi{
         setPic("unicorn.png", 90);
     }
 
-    @Override
+//    @Override
     public void update(){
         super.update();
     }

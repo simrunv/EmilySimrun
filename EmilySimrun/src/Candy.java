@@ -7,15 +7,18 @@ import java.awt.image.BufferedImage;
 public class Candy extends Pepsi{
 
     public Candy( int x, int y){
-        super (500, 100);
+        super (x, y);
         setPic("candy.png", 90);
 
-}
+    }
 
+
+//    @Override
     public void update() {
         super.update();
         if (getLoc().x < 0) {
             setLoc(new Point(1000, getLoc().y));
         }
+        super.update();
     }
 }
