@@ -18,7 +18,7 @@ public class Main extends JPanel{
     public Main(){
         unicorn = new Unicorn();
         candy = new Candy(0,100);
-        candy2 = new Candy(0,300);
+        candy2 = new Candy(0,350);
         keys = new boolean[500];
 
 
