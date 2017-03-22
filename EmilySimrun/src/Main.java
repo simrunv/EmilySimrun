@@ -17,8 +17,8 @@ public class Main extends JPanel{
 
     public Main(){
         unicorn = new Unicorn();
-        candy = new Candy(0,100);
-        candy2 = new Candy(0,350);
+        candy = new Candy(100,0);
+        candy2 = new Candy(300,0);
         keys = new boolean[500];
 
 
@@ -37,6 +37,15 @@ public class Main extends JPanel{
                         unicorn.update();
                         unicorn.rotateBy(180);
                     }
+
+                    candy.setDir(180);
+                    candy.setSpeed(2);
+                    candy.update();
+                    candy.rotateBy(270);
+                    candy2.setDir(180);
+                    candy2.setSpeed(2);
+                    candy2.update();
+                    candy2.rotateBy(270);
 
                 repaint();
                 }
