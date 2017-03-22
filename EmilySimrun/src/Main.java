@@ -36,7 +36,7 @@ public class Main extends JPanel{
                         unicorn.setDir(270);
                         unicorn.setSpeed(1);
                         unicorn.update();
-                        unicorn.rotateBy(180);
+                        unicorn.rotateBy(180); //jkdfhjd
                     }
 
                 repaint();
