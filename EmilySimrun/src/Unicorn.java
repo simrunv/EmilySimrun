@@ -12,4 +12,7 @@ public class Unicorn extends Pepsi{
     public void update(){
         super.update();
     }
+    public void jump(){
+
+    }
 }
