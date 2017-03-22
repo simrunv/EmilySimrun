@@ -34,7 +34,7 @@ public class Main extends JPanel{
                         //If you want to have the user have to push the key each move use the false.
                     }else if (keys[KeyEvent.VK_SPACE] == false) {
                         unicorn.setDir(270);
-                        unicorn.setSpeed(3);
+                        unicorn.setSpeed(4);
                         unicorn.update();
                         unicorn.rotateBy(180);
                     }
