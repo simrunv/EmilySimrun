@@ -26,17 +26,21 @@ public class Main extends JPanel{
             public void actionPerformed(ActionEvent actionEvent) {
 
                 //move the unicorn
+
                     if(keys[KeyEvent.VK_SPACE]){
+                        unicorn.run();
                         unicorn.setDir(90);
                         unicorn.jump();
                         keys[KeyEvent.VK_SPACE] = false;
                         //If you want to have the user have to push the key each move use the false.
                     }else if (keys[KeyEvent.VK_SPACE] == false) {
+                        unicorn.run();
                         unicorn.setDir(270);
                         unicorn.setSpeed(3);
                         unicorn.update();
                         unicorn.rotateBy(180);
                     }
+                    unicorn.run();
 
                     candy.setDir(180);
                     candy.setSpeed(2);

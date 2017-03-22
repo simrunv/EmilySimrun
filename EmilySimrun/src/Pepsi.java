@@ -51,6 +51,10 @@ public class Pepsi {
         Point move = new Point(getLoc().x, getLoc().y - getBoundingRectangle().height);
         setLoc(move);
     }
+    public void run(){
+        speed = 4;
+        loc.translate((int) (Math.cos(Math.toRadians(0)) * speed), loc.y);
+    }
 
     public void setDir(int newDir) {
         dir = newDir;
