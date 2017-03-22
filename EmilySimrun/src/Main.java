@@ -12,7 +12,7 @@ public class Main extends JPanel{
     public Main(){
         unicorn = new Unicorn();
         candy = new Candy(100,100);
-        candy2 = new Candy(200,300);
+        candy2 = new Candy(200,250);
     }
 
     public void paintComponent(Graphics g) {
