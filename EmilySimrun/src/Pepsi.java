@@ -59,6 +59,14 @@ public class Pepsi {
         this.loc = loc;
     }
 
+    public void setSpeed(int newSpeed){
+        speed = newSpeed;
+    }
+
+    public void rotateBy(int delta) {
+        setDir(dir + delta);
+    }
+
     public int getDir() {
         return dir;
     }
