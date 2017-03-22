@@ -11,7 +11,7 @@ public class Unicorn extends Pepsi{
         setSpeed(this.getBoundingRectangle().height);
     }
 
-//    @Override
+    @Override
     public void update(){
         super.update();
     }

@@ -13,7 +13,7 @@ public class Candy extends Pepsi{
     }
 
 
-//    @Override
+    @Override
     public void update() {
         super.update();
         if (getLoc().x < 0) {
