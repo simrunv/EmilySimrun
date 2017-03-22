@@ -17,13 +17,12 @@ public class Main extends JPanel{
 
     public Main(){
         unicorn = new Unicorn();
-        candy = new Candy(100,100);
-        candy2 = new Candy(200,300);
+        candy = new Candy(0,100);
+        candy2 = new Candy(0,300);
         keys = new boolean[500];
 
 
         timer = new Timer(40, new ActionListener() {
-            @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
                 //move the unicorn
