@@ -12,18 +12,18 @@ public class Main extends JPanel{
 
     public static final int FRAMEWIDTH = 1000, FRAMEHEIGHT = 600;
     private Pepsi unicorn, candy, candy2;
-    private boolean[] keys;
     private Timer timer;
+    private boolean[] keys;
 
     public Main(){
         unicorn = new Unicorn();
-        candy = new Candy(100,0);
-        candy2 = new Candy(300,0);
+        candy = new Candy(100,100);
+        candy2 = new Candy(200,300);
         keys = new boolean[500];
 
 
         timer = new Timer(40, new ActionListener() {
-//            @Override
+            @Override
             public void actionPerformed(ActionEvent actionEvent) {
 
                 //move the unicorn
@@ -37,17 +37,7 @@ public class Main extends JPanel{
                         unicorn.setSpeed(1);
                         unicorn.update();
                         unicorn.rotateBy(180); //jkdfhjd
-
                     }
-                    candy.setDir(180);
-                    candy.setSpeed(2);
-                    candy.update();
-                    candy.rotateBy(270);
-
-                    candy2.setDir(180);
-                    candy2.setSpeed(2);
-                    candy2.update();
-                    candy2.rotateBy(270);
 
                 repaint();
                 }
@@ -55,17 +45,17 @@ public class Main extends JPanel{
         timer.start();
 
         addKeyListener(new KeyListener() {
-//            @Override
+            @Override
             public void keyTyped(KeyEvent keyEvent) {
 
             }
 
-//            @Override
+            @Override
             public void keyPressed(KeyEvent keyEvent) {
                 keys[keyEvent.getKeyCode()] = true;
             }
 
-//            @Override
+            @Override
             public void keyReleased(KeyEvent keyEvent) {
                 keys[keyEvent.getKeyCode()] = false;
             }

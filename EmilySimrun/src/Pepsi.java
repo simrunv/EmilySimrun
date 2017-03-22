@@ -47,6 +47,11 @@ public class Pepsi {
         loc.translate(dx, dy);
     }
 
+    public void jump(){
+        Point move = new Point(getLoc().x, getLoc().y - getBoundingRectangle().height);
+        setLoc(move);
+    }
+
     public void setDir(int newDir) {
         dir = newDir;
     }
