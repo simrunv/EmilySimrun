@@ -11,7 +11,7 @@ import java.awt.event.KeyListener;
 public class Main extends JPanel{
 
     public static final int FRAMEWIDTH = 1000, FRAMEHEIGHT = 600;
-    private Pepsi unicorn, candy, candy2, a;
+    private Pepsi unicorn, candy, candy2, a, b;
     private Timer timer;
     private boolean[] keys;
 
@@ -19,7 +19,8 @@ public class Main extends JPanel{
         unicorn = new Unicorn();
         candy = new Candy(100,0);
         candy2 = new Candy(300,0);
-        a = new Candy(100, 100);
+        a = new Candy(100, 400);
+        b = new Candy(300, 525);
         keys = new boolean[500];
 
 
@@ -42,13 +43,21 @@ public class Main extends JPanel{
                 }
 
                     candy.setDir(180);
-                    candy.setSpeed(2);
+                    candy.setSpeed(3);
                     candy.update();
                     candy.rotateBy(90);
                     candy2.setDir(180);
-                    candy2.setSpeed(2);
+                    candy2.setSpeed(3);
                     candy2.update();
                     candy2.rotateBy(270);
+                a.setDir(180);
+                a.setSpeed(3);
+                a.update();
+                a.rotateBy(270);
+                b.setDir(180);
+                b.setSpeed(3);
+                b.update();
+                b.rotateBy(90);
 
                 repaint();
                 }
@@ -83,9 +92,11 @@ public class Main extends JPanel{
 
         unicorn.draw(g2);
         candy.draw(g2);
+        a.draw(g2);
         candy2.setPic("smallcandy.png", 90);
         candy2.draw(g2);
-
+        b.setPic("smallcandy.png", 90);
+        b.draw(g2);
     }
 
 
