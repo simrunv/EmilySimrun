@@ -36,7 +36,7 @@ public class Main extends JPanel{
 
                 }else if (keys[KeyEvent.VK_SPACE] == false) {
                     unicorn.setDir(270);
-                    unicorn.setSpeed(4);
+                    unicorn.setSpeed(6);
                     unicorn.update();
                     unicorn.rotateBy(180);
                 }

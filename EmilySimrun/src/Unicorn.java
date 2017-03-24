@@ -8,7 +8,7 @@ public class Unicorn extends Pepsi{
     public Unicorn(){
         super(200, 300);
         setPic("unicorn.png", 90);
-        setSpeed(this.getBoundingRectangle().height);
+        setSpeed(this.getBoundingRectangle().height * 2);
     }
 
     @Override
