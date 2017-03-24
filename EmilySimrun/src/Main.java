@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.util.ArrayList;
 
 /**
  * Created by simrun_virkud on 3/15/17.
@@ -14,6 +15,7 @@ public class Main extends JPanel{
     private Pepsi unicorn, candy, candy2, a;
     private Timer timer;
     private boolean[] keys;
+    private ArrayList<Cloud> clouds;
 
     public Main(){
         unicorn = new Unicorn();
@@ -21,6 +23,11 @@ public class Main extends JPanel{
         candy2 = new Candy(300,0);
         a = new Candy(100, 100);
         keys = new boolean[500];
+        clouds = new ArrayList<Cloud>();
+
+        for (int i = 0; i < 6; i++) {
+            clouds.add(new Cloud((int)(Math.random()*1000), 450));
+        }
 
 
         timer = new Timer(40, new ActionListener() {
@@ -41,14 +48,21 @@ public class Main extends JPanel{
                     unicorn.rotateBy(180);
                 }
 
-                    candy.setDir(180);
-                    candy.setSpeed(2);
-                    candy.update();
-                    candy.rotateBy(90);
-                    candy2.setDir(180);
-                    candy2.setSpeed(2);
-                    candy2.update();
-                    candy2.rotateBy(270);
+                candy.setDir(180);
+                candy.setSpeed(2);
+                candy.update();
+                candy.rotateBy(90);
+                candy2.setDir(180);
+                candy2.setSpeed(2);
+                candy2.update();
+                candy2.rotateBy(270);
+
+                for (Cloud c: clouds){
+                    c.setDir(180);
+                    c.setSpeed(5);
+                    c.update();
+                    c.rotateBy(-90);
+                }
 
                 repaint();
                 }
@@ -85,6 +99,10 @@ public class Main extends JPanel{
         candy.draw(g2);
         candy2.setPic("smallcandy.png", 90);
         candy2.draw(g2);
+
+        for (Cloud c: clouds){
+            c.draw(g2);
+        }
 
     }
 
