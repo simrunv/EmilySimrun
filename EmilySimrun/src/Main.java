@@ -78,7 +78,8 @@ public class Main extends JPanel{
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
-//        g2.fillRect();
+        g2.setColor(Color.MAGENTA);
+        g2.fillRect(0, 0, 1000, 600);
 
         unicorn.draw(g2);
         candy.draw(g2);
