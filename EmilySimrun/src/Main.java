@@ -29,7 +29,7 @@ public class Main extends JPanel{
         clouds = new ArrayList<Cloud>();
 
         for (int i = 0; i < 6; i++) {
-            clouds.add(new Cloud((int)(Math.random()*1000), 450));
+            clouds.add(new Cloud((int)(Math.random()*1000), 500));
         }
 
 
