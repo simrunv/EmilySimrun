@@ -49,7 +49,7 @@ public class Main extends JPanel{
                 }
 
                 candy.setDir(180);
-                candy.setSpeed(2);
+                candy.setSpeed(2); //
                 candy.update();
                 candy.rotateBy(90);
                 candy2.setDir(180);
