@@ -22,9 +22,9 @@ public class Main extends JPanel{
         candy = new Candy(100,0);
         candy2 = new Candy(210,0);
         cm = new Candy(380, 0);
-        ab = new Candy(100, 300);
-        bs = new Candy(210, 425);
-        dm = new Candy(380, 350);
+        ab = new Candy(100, 350);
+        bs = new Candy(210, 475);
+        dm = new Candy(380, 400);
         keys = new boolean[500];
         clouds = new ArrayList<Cloud>();
 
