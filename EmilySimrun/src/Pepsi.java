@@ -48,7 +48,7 @@ public class Pepsi {
     }
 
     public void jump(){
-        Point move = new Point(getLoc().x + speed, getLoc().y - getBoundingRectangle().height*3/4);
+        Point move = new Point(getLoc().x, getLoc().y - getBoundingRectangle().height*3/4);
         setLoc(move);
     }
     public void run(){
