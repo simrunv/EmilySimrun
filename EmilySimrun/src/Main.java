@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Main extends JPanel{
 
     public static final int FRAMEWIDTH = 1000, FRAMEHEIGHT = 600;
-    private Pepsi unicorn, candy, candy2, a;
+    private Pepsi unicorn, candy, candy2, ab, bs, cm, dm;
     private Timer timer;
     private boolean[] keys;
     private ArrayList<Cloud> clouds;
@@ -20,8 +20,11 @@ public class Main extends JPanel{
     public Main(){
         unicorn = new Unicorn();
         candy = new Candy(100,0);
-        candy2 = new Candy(300,0);
-        a = new Candy(100, 100);
+        candy2 = new Candy(210,0);
+        cm = new Candy(380, 0);
+        ab = new Candy(100, 400);
+        bs = new Candy(210, 525);
+        dm = new Candy(380, 450);
         keys = new boolean[500];
         clouds = new ArrayList<Cloud>();
 
@@ -49,13 +52,29 @@ public class Main extends JPanel{
                 }
 
                 candy.setDir(180);
-                candy.setSpeed(2); //
+                candy.setSpeed(3);
                 candy.update();
                 candy.rotateBy(90);
                 candy2.setDir(180);
-                candy2.setSpeed(2);
+                candy2.setSpeed(3);
                 candy2.update();
                 candy2.rotateBy(270);
+                ab.setDir(180);
+                ab.setSpeed(3);
+                ab.update();
+                ab.rotateBy(270);
+                bs.setDir(180);
+                bs.setSpeed(3);
+                bs.update();
+                bs.rotateBy(90);
+                cm.setDir(180);
+                cm.setSpeed(3);
+                cm.update();
+                cm.rotateBy(90);
+                dm.setDir(180);
+                dm.setSpeed(3);
+                dm.update();
+                dm.rotateBy(270);
 
                 for (Cloud c: clouds){
                     c.setDir(180);
@@ -97,8 +116,15 @@ public class Main extends JPanel{
 
         unicorn.draw(g2);
         candy.draw(g2);
+        ab.draw(g2);
         candy2.setPic("smallcandy.png", 90);
         candy2.draw(g2);
+        bs.setPic("smallcandy.png", 90);
+        bs.draw(g2);
+        cm.setPic("medcandy.png", 90);
+        cm.draw(g2);
+        dm.setPic("medcandy.png", 90);
+        dm.draw(g2);
 
         for (Cloud c: clouds){
             c.draw(g2);
