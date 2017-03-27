@@ -16,6 +16,7 @@ public class Main extends JPanel{
     private Timer timer;
     private boolean[] keys;
     private ArrayList<Cloud> clouds;
+    private ArrayList<Pepsi> candies;
 
     public Main(){
         unicorn = new Unicorn();
@@ -27,6 +28,7 @@ public class Main extends JPanel{
         dm = new Candy(380, 400);
         keys = new boolean[500];
         clouds = new ArrayList<Cloud>();
+        candies = new ArrayList<Pepsi>();
 
         for (int i = 0; i < 6; i++) {
             clouds.add(new Cloud((int)(Math.random()*1000), 500));
@@ -76,12 +78,36 @@ public class Main extends JPanel{
                 dm.update();
                 dm.rotateBy(270);
 
+                candies.add(candy);
+                candies.add(candy2);
+                candies.add(ab);
+                candies.add(bs);
+                candies.add(cm);
+                candies.add(dm);
+
+
                 for (Cloud c: clouds){
                     c.setDir(180);
                     c.setSpeed(5);
                     c.update();
                     c.rotateBy(-90);
                 }
+
+                //check for collisions
+                boolean dead = false;
+
+                for (int i = 0; i < candies.size(); i++) {
+                    Pepsi c = candies.get(i);
+                    if (c instanceof Candy) {
+                        if (unicorn.intersects(c)) {
+                            dead = true;
+                            i = candies.size();
+                        }
+                    }
+                }
+
+                if(dead)
+                    unicorn.setDir(270);
 
                 repaint();
                 }
