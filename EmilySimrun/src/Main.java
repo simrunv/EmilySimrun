@@ -106,6 +106,10 @@ public class Main extends JPanel{
                 candies.add(bs);
                 candies.add(cm);
                 candies.add(dm);
+                candies.add(eb);
+                candies.add(fm);
+                candies.add(gm);
+                candies.add(hs);
 
 
                 for (Cloud c: clouds){
