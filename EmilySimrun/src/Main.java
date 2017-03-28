@@ -17,9 +17,11 @@ public class Main extends JPanel{
     private boolean[] keys;
     private ArrayList<Cloud> clouds;
     private ArrayList<Pepsi> candies;
+    private boolean dead = false;
 
     public Main(){
         unicorn = new Unicorn();
+        dead = false;
         candy = new Candy(100,0);
         candy2 = new Candy(210,0);
         cm = new Candy(380, 0);
@@ -40,13 +42,13 @@ public class Main extends JPanel{
 
                 //move the unicorn
 
-                if(keys[KeyEvent.VK_SPACE]){
+                if(keys[KeyEvent.VK_SPACE] && !dead){
                     unicorn.setDir(90);
                     unicorn.jump();
                     keys[KeyEvent.VK_SPACE] = false;
                     //If you want to have the user have to push the key each move use the false.
 
-                }else if (keys[KeyEvent.VK_SPACE] == false) {
+                }else if (keys[KeyEvent.VK_SPACE] == false && !dead) {
                     unicorn.setDir(270);
                     unicorn.setSpeed(6);
                     unicorn.update();
@@ -94,7 +96,7 @@ public class Main extends JPanel{
                 }
 
                 //check for collisions
-                boolean dead = false;
+//                boolean dead = false;
 
                 for (int i = 0; i < candies.size(); i++) {
                     Pepsi c = candies.get(i);
@@ -106,8 +108,11 @@ public class Main extends JPanel{
                     }
                 }
 
-                if(dead)
+                if(dead){
+                    keys[KeyEvent.VK_SPACE] = false;
                     unicorn.setDir(270);
+                    unicorn.update();
+                }
 
                 repaint();
                 }
