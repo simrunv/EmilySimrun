@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Main extends JPanel{
 
     public static final int FRAMEWIDTH = 1000, FRAMEHEIGHT = 600;
-    private Pepsi unicorn, candy, candy2, ab, bs, cm, dm;
+    private Pepsi unicorn, candy, candy2, ab, bs, cm, dm, eb, fm, gm, hs;
     private Timer timer;
     private boolean[] keys;
     private ArrayList<Cloud> clouds;
@@ -26,6 +26,10 @@ public class Main extends JPanel{
         ab = new Candy(100, 350);
         bs = new Candy(210, 475);
         dm = new Candy(380, 400);
+        eb = new Candy(500, 0);
+        fm = new Candy(500, 400);
+        gm = new Candy(620, 0);
+        hs = new Candy(620, 475);
         keys = new boolean[500];
         clouds = new ArrayList<Cloud>();
         candies = new ArrayList<Pepsi>();
@@ -77,6 +81,22 @@ public class Main extends JPanel{
                 dm.setSpeed(3);
                 dm.update();
                 dm.rotateBy(270);
+                eb.setDir(180);
+                eb.setSpeed(3);
+                eb.update();
+                eb.rotateBy(270);
+                fm.setDir(180);
+                fm.setSpeed(3);
+                fm.update();
+                fm.rotateBy(270);
+                gm.setDir(180);
+                gm.setSpeed(3);
+                gm.update();
+                gm.rotateBy(90);
+                hs.setDir(180);
+                hs.setSpeed(3);
+                hs.update();
+                hs.rotateBy(270);
 
                 candies.add(candy);
                 candies.add(candy2);
@@ -151,6 +171,15 @@ public class Main extends JPanel{
         cm.draw(g2);
         dm.setPic("medcandy.png", 90);
         dm.draw(g2);
+        eb.setPic("candy.png", 90);
+        eb.draw(g2);
+        fm.setPic("medcandy.png", 90);
+        fm.draw(g2);
+        gm.setPic("medcandy.png", 90);
+        gm.draw(g2);
+        hs.setPic("smallcandy.png", 90);
+        hs.draw(g2);
+
 
         for (Cloud c: clouds){
             c.draw(g2);
