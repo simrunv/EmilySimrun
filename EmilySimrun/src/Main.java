@@ -22,16 +22,16 @@ public class Main extends JPanel{
     public Main(){
         unicorn = new Unicorn();
         dead = false;
-        candy = new Candy(100,0);
-        candy2 = new Candy(210,0);
-        cm = new Candy(380, 0);
-        ab = new Candy(100, 350);
-        bs = new Candy(210, 475);
-        dm = new Candy(380, 400);
-        eb = new Candy(500, 0);
-        fm = new Candy(500, 400);
-        gm = new Candy(620, 0);
-        hs = new Candy(620, 475);
+        candy = new Candy(400,0);
+        candy2 = new Candy(510,0);
+        cm = new Candy(680, 0);
+        ab = new Candy(400, 350);
+        bs = new Candy(510, 475);
+        dm = new Candy(680, 400);
+        eb = new Candy(800, 0);
+        fm = new Candy(800, 400);
+        gm = new Candy(920, 0);
+        hs = new Candy(920, 475);
         keys = new boolean[500];
         clouds = new ArrayList<Cloud>();
         candies = new ArrayList<Pepsi>();
