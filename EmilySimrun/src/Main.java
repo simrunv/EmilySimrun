@@ -196,9 +196,10 @@ public class Main extends JPanel{
         hs.draw(g2);
 
         if (dead == true){
-            g2.setFont(new Font("Corsiva", Font.BOLD, 48));
+            g2.setFont(new Font("Magical Unicorn", Font.BOLD, 64));
             g2.setColor(Color.CYAN);
-            g2.drawString("Game Over! Hit 'R' to restart", 130, FRAMEHEIGHT/2);
+            g2.drawString("Game Over!", 150, FRAMEHEIGHT/2);
+            g2.drawString("Hit 'R' to restart", 120, FRAMEHEIGHT/2+40);
         }
 
 
