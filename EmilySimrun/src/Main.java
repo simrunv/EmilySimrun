@@ -58,6 +58,11 @@ public class Main extends JPanel{
                     unicorn.update();
                     unicorn.rotateBy(180);
                 }
+                if (keys[KeyEvent.VK_R]){
+                    dead = false;
+                    unicorn.setLoc(new Point(200, 300));
+                    unicorn.setDir(90);
+                }
 
                 candy.setDir(180);
                 candy.setSpeed(3);
@@ -188,6 +193,12 @@ public class Main extends JPanel{
         gm.draw(g2);
         hs.setPic("smallcandy.png", 90);
         hs.draw(g2);
+
+        if (dead == true){
+            g2.setFont(new Font("Corsiva", Font.BOLD, 48));
+            g2.setColor(Color.CYAN);
+            g2.drawString("Game Over! Hit 'R' to restart", 130, FRAMEHEIGHT/2);
+        }
 
 
         for (Cloud c: clouds){
