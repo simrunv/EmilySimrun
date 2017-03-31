@@ -58,7 +58,7 @@ public class Main extends JPanel{
                     unicorn.update();
                     unicorn.rotateBy(180);
                 }
-                if (keys[KeyEvent.VK_R]){
+                if (keys[KeyEvent.VK_R] && dead == true){
                     dead = false;
                     unicorn.setLoc(new Point(200, 300));
                     unicorn.setDir(90);
