@@ -62,6 +62,7 @@ public class Main extends JPanel{
                     dead = false;
                     unicorn.setLoc(new Point(200, 300));
                     unicorn.setDir(90);
+                    keys[KeyEvent.VK_R] = false;
                 }
 
                 candy.setDir(180);
