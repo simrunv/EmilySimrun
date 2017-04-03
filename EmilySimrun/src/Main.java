@@ -1,9 +1,13 @@
+import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
+import java.awt.image.BufferedImage;
+import java.awt.image.ImageObserver;
+import java.io.File;
 import java.util.ArrayList;
 
 /**
@@ -190,21 +194,25 @@ public class Main extends JPanel{
         eb.draw(g2);
         fm.setPic("medcandy.png", 90);
         fm.draw(g2);
-        gm.setPic("medcandy.png", 90);
         gm.draw(g2);
         hs.setPic("smallcandy.png", 90);
         hs.draw(g2);
 
-        if (dead == true){
-            g2.setFont(new Font("Magical Unicorn", Font.BOLD, 64));
-            g2.setColor(Color.CYAN);
-            g2.drawString("Game Over!", 150, FRAMEHEIGHT/2);
-            g2.drawString("Hit 'R' to restart", 120, FRAMEHEIGHT/2+40);
-        }
-
-
         for (Cloud c: clouds){
             c.draw(g2);
+        }
+
+        if (dead == true){
+            g2.setColor(Color.MAGENTA);
+            g2.fillRect(0, 0, 1000, 600);
+            try {
+                BufferedImage pic = ImageIO.read(new File("EmilySimrun/res/game over.png"));
+                g2.drawImage(pic, 100, 0, null);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
         }
 
     }
