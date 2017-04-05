@@ -22,20 +22,22 @@ public class Main extends JPanel{
     private ArrayList<Cloud> clouds;
     private ArrayList<Pepsi> candies;
     private boolean dead = false;
+    private int count;
 
     public Main(){
         unicorn = new Unicorn();
         dead = false;
-        candy = new Candy(400,0);
-        candy2 = new Candy(510,0);
-        cm = new Candy(680, 0);
-        ab = new Candy(400, 350);
-        bs = new Candy(510, 400);
-        dm = new Candy(680, 450);
-        eb = new Candy(800, 0);
-        fm = new Candy(800, 450);
-        gm = new Candy(920, 0);
-        hs = new Candy(920, 400);
+        count = 0;
+        candy = new Candy(400,0,false);
+        candy2 = new Candy(510,0,false);
+        cm = new Candy(680, 0,false);
+        ab = new Candy(400, 350,false);
+        bs = new Candy(510, 400,false);
+        dm = new Candy(680, 450,false);
+        eb = new Candy(800, 0,false);
+        fm = new Candy(800, 450,false);
+        gm = new Candy(920, 0,false);
+        hs = new Candy(920, 400,false);
         keys = new boolean[500];
         clouds = new ArrayList<Cloud>();
         candies = new ArrayList<Pepsi>();
@@ -214,6 +216,19 @@ public class Main extends JPanel{
             }
 
         }
+
+
+        for (Pepsi p: candies){
+            if (p.getLoc().x <= 200&&p.getpat()){
+                count++;
+                p.betpat(true);
+                if (p.getLoc().x < 200){
+                }
+            }
+        }
+        g2.setColor(Color.WHITE);
+        g2.setFont(new Font("Helvetica", Font.BOLD, 48));
+        g2.drawString(" " + count/2, 800, 300);
 
     }
 
