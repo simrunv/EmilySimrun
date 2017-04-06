@@ -28,20 +28,28 @@ public class Main extends JPanel{
         unicorn = new Unicorn();
         dead = false;
         count = 0;
-        candy = new Candy(400, 0);
-        candy2 = new Candy(510, 0);
-        cm = new Candy(620, 0);
-        ab = new Candy(400, 350);
-        bs = new Candy(510, 400);
-        dm = new Candy(620, 450);
-        eb = new Candy(730, 0);
-        fm = new Candy(760, 450);
-        gm = new Candy(880, 0);
-        hs = new Candy(880, 400);
-        a = new Candy(100, 450);
+
+        a = new Candy(100, 400);
         b = new Candy(100, 0);
+
         c = new Candy(230, 350);
         d = new Candy(230, 0);
+
+        candy = new Candy(400, 0);
+        ab = new Candy(400, 350);
+
+        candy2 = new Candy(510, 0);
+        bs = new Candy(510, 400);
+
+        cm = new Candy(620, 0);
+        dm = new Candy(620, 450);
+
+        eb = new Candy(730, 0);
+        fm = new Candy(760, 450);
+
+        gm = new Candy(880, 0);
+        hs = new Candy(880, 350);
+
         keys = new boolean[500];
         clouds = new ArrayList<Cloud>();
         candies = new ArrayList<Pepsi>();
@@ -56,10 +64,8 @@ public class Main extends JPanel{
 
                 //move the unicorn
 
-                if (keys[KeyEvent.VK_SPACE] == false && !dead && count == 0){
-                    unicorn.setSpeed(0);
-                }
-                else if(keys[KeyEvent.VK_SPACE] && !dead){
+
+                if(keys[KeyEvent.VK_SPACE] && !dead){
                     unicorn.setDir(90);
                     unicorn.jump();
                     keys[KeyEvent.VK_SPACE] = false;
@@ -73,7 +79,7 @@ public class Main extends JPanel{
                 }
                 if (keys[KeyEvent.VK_R] && dead == true){
                     dead = false;
-                    unicorn.setLoc(new Point(200, 300));
+                    unicorn.setLoc(new Point(500, 260));
                     unicorn.setDir(90);
                     keys[KeyEvent.VK_R] = false;
                     count = 0;
@@ -252,7 +258,7 @@ public class Main extends JPanel{
                 e.printStackTrace();
             }
             for (Pepsi p: candies){
-                if (p.getLoc().x <= 200) {
+                if (p.getLoc().x <= 500) {
                     p.setpast(true);
                 }
             }
@@ -260,7 +266,7 @@ public class Main extends JPanel{
 
 
         for (Pepsi p: candies){
-            if (p.getLoc().x <= 200) {
+            if (p.getLoc().x <= 500) {
                 //p.setpast(true);
                 if (p.getpast() == false) {
                     count++;
