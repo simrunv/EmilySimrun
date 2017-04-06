@@ -56,7 +56,10 @@ public class Main extends JPanel{
 
                 //move the unicorn
 
-                if(keys[KeyEvent.VK_SPACE] && !dead){
+                if (keys[KeyEvent.VK_SPACE] == false && !dead && count == 0){
+                    unicorn.setSpeed(0);
+                }
+                else if(keys[KeyEvent.VK_SPACE] && !dead){
                     unicorn.setDir(90);
                     unicorn.jump();
                     keys[KeyEvent.VK_SPACE] = false;
