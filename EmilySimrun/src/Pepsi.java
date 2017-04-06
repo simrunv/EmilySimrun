@@ -14,13 +14,22 @@ public class Pepsi {
     private int dir, picOrientation;
     private int speed;
     private BufferedImage pic;
+    private boolean pastt;
 
-    public Pepsi(int x, int y){
+    public Pepsi(int x, int y, boolean past){
         loc = new Point(x, y);
         setLoc(loc);
         dir = 90;
         speed = 5;
         setPic("blank.png", 0);
+        pastt = past;
+    }
+
+    public boolean getpast(){
+        return pastt;
+    }
+    public void setpast(boolean past){
+        pastt = past;
     }
 
     public void draw(Graphics2D g2) {

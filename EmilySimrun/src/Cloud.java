@@ -7,7 +7,7 @@ public class Cloud extends Pepsi{
 
 
     public Cloud( int x, int y){
-        super(x, y);
+        super(x, y, false);
         setPic("cloud.png", 90);
 
     }

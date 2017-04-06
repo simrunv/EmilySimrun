@@ -6,7 +6,7 @@ import java.awt.*;
 public class Unicorn extends Pepsi{
 
     public Unicorn(){
-        super(200, 300);
+        super(200, 300, false);
         setPic("unicorn.png", 90);
         setSpeed(this.getBoundingRectangle().height * 2);
     }
