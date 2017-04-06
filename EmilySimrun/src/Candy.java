@@ -20,6 +20,7 @@ public class Candy extends Pepsi{
         super.update();
         if (getLoc().x < 0) {
             setLoc(new Point(1000, getLoc().y));
+            setpast(false);
         }
         super.update();
     }

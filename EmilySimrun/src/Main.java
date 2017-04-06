@@ -69,6 +69,7 @@ public class Main extends JPanel{
                     unicorn.setLoc(new Point(200, 300));
                     unicorn.setDir(90);
                     keys[KeyEvent.VK_R] = false;
+                    count = 0;
                 }
 
                 candy.setDir(180);
@@ -214,17 +215,22 @@ public class Main extends JPanel{
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
+            for (Pepsi p: candies){
+                if (p.getLoc().x <= 200) {
+                    p.setpast(true);
+                }
+            }
         }
 
 
         for (Pepsi p: candies){
-            if (p.getLoc().x <= 200){
-                p.setpast(true);
-                if (p.getLoc().x <= 200 && p.getpast() == true){
+            if (p.getLoc().x <= 200) {
+                //p.setpast(true);
+                if (p.getpast() == false) {
                     count++;
+                    p.setpast(true);
                 }
-                p.setpast(false);
+//                p.setpast(false);
             }
 
         }
