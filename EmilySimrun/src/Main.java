@@ -30,7 +30,7 @@ public class Main extends JPanel{
         count = 0;
 
         a = new Candy(100, 400);
-        b = new Candy(100, 0);
+        b = new Candy(100, 270);
 
         c = new Candy(230, 350);
         d = new Candy(230, 0);
